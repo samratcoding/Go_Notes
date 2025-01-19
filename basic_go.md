@@ -32,25 +32,25 @@
 - - Formatting and parsing time.
 - - Using time.Sleep for delays.
 - Type and Typecasting:
--- Explicit casting (int(x)).
--- Checking types with reflection (reflect.TypeOf).
+- - Explicit casting (int(x)).
+- - Checking types with reflection (reflect.TypeOf).
 - Slice Operations:
--- append, len, cap, copy.
+- - append, len, cap, copy.
 - Creating Collections:
--- Using make for slices, maps, and channels.
+- - Using make for slices, maps, and channels.
 
 ### 07. call back methods
 - Passing Functions as Arguments:
--- Defining and using callbacks.
--- Using closures for callback behavior.
+- - Defining and using callbacks.
+- - Using closures for callback behavior.
 - Practical Use Cases:
--- Goroutine callbacks.
--- Sorting using custom comparator callbacks.
+- - Goroutine callbacks.
+- - Sorting using custom comparator callbacks.
 
 ### 08. String manipulation
 - String Operations:
--- Concatenation and splitting.
--- Trimming, prefix, and suffix checks.
+- - Concatenation and splitting.
+- - Trimming, prefix, and suffix checks.
 - String Formatting (fmt.Sprintf)
 - Regular Expressions
 - String to other types (strconv)
@@ -64,39 +64,39 @@ Project Use Cases (which collection/sequence data type where should use)
 
 ### 10. Strong OOP in GO (following Java or Python's)
 - Structs and Interfaces:
--- Using structs as objects.
--- Interfaces for polymorphism.
+- - Using structs as objects.
+- - Interfaces for polymorphism.
 - Composition over Inheritance:
 -- Embedding structs.
 - Method Receivers:
--- Pointer vs. value receivers.
+- - Pointer vs. value receivers.
 - Design Patterns:
--- Factory, Singleton, and Adapter in Go.
+- - Factory, Singleton, and Adapter in Go.
 
 ### 11. Threading, Basic Request, Data Scrapping etc
 - Threading:
--- Using goroutines for lightweight concurrency.
--- Synchronization with sync.WaitGroup and sync.Mutex.
+- - Using goroutines for lightweight concurrency.
+- - Synchronization with sync.WaitGroup and sync.Mutex.
 - Requests:
--- Basic HTTP requests with net/http.
--- Parsing responses (io.Reader).
+- - Basic HTTP requests with net/http.
+- - Parsing responses (io.Reader).
 - Data Scraping:
--- Using colly for web scraping.
--- HTML parsing with goquery.
+- - Using colly for web scraping.
+- - HTML parsing with goquery.
 
 ### 12. Error Handling (Try Except)
 - Error Handling Idioms:
--- if err != nil.
--- Wrapping errors with fmt.Errorf.
+- - if err != nil.
+- - Wrapping errors with fmt.Errorf.
 - Custom Errors:
--- Defining custom error types.
+- - Defining custom error types.
 - Panic and Recover:
--- Handling unexpected errors gracefully.
+- - Handling unexpected errors gracefully.
 
 ### 13. File Handling and IO
 - File Operations:
--- Reading and writing files (os and io/ioutil).
+- - Reading and writing files (os and io/ioutil).
 - Buffering:
--- Using bufio for efficient IO.
+- - Using bufio for efficient IO.
 - File Manipulation:
--- Checking existence, renaming, and deleting files.
+- - Checking existence, renaming, and deleting files.
