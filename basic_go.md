@@ -29,8 +29,8 @@
 
 ### 06. Common Built-in methods
 - Time and Sleep:
--- Formatting and parsing time.
--- Using time.Sleep for delays.
+- - Formatting and parsing time.
+- - Using time.Sleep for delays.
 - Type and Typecasting:
 -- Explicit casting (int(x)).
 -- Checking types with reflection (reflect.TypeOf).
