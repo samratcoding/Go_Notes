@@ -4,10 +4,41 @@
 - Basic Commands: go run, go build, go test, go fmt, and go get.
 
 ### 02. Data Types and common variable rules
-- Variable Declaration: var, short declaration (:=), and constants (const).
-- Zero Values: Behavior of uninitialized variables.
-- Type Inference: Using := and var intelligently.
-- Type Aliases: Understanding type aliases and custom types.
+### 02. Data Types and Common Variable Rules
+- **Variable Declaration**: 
+  - Use `var` for explicit declarations:  
+    ```go
+    var x int = 10
+    ```
+  - Use short declaration (`:=`) for concise syntax:  
+    ```go
+    y := 20
+    ```
+  - Constants are declared with `const`:  
+    ```go
+    const pi = 3.14
+    ```
+- **Zero Values**: 
+  - Uninitialized variables are assigned a zero value based on their type:
+    - `int`: `0`
+    - `float64`: `0.0`
+    - `string`: `""`
+    - `bool`: `false`
+
+- **Type Inference**: 
+  - The `:=` operator infers the type from the assigned value:
+    ```go
+    z := "Hello" // z is inferred as string
+    ```
+  - Use `var` when you need to explicitly specify the type.
+
+- **Type Aliases**: 
+  - Create custom types or aliases using `type`:
+    ```go
+    type Celsius float64
+    var temperature Celsius = 25.5
+    ```
+  - Type aliases help improve code readability and enforce type safety.
   
 ### 03. Statement
 - If-Else: Multi-condition handling.
