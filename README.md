@@ -83,6 +83,16 @@ for i := range fruits{
 	fmt.Println(fruits[i])
 }
 ```
+- Index, value
+```go
+var fruit = []string{"Apple", "Banana", "Watermelon"}
+for index, value := range fruit{
+	fruit := fmt.Sprintf("index is : %d name is : %s", index, value)
+	fmt.Println(fruit)
+	// fmt.Printf("Index is : %d value is :%s \n", index, value)
+	// %s = string, %d = decimal/int,  %v = value, %t = type, %f =float, %+v = struct with field name
+}
+```
 - Normal Loop in one statement
 ```go
 fruits := []string{"apple", "banana", "orange"}
