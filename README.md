@@ -1,7 +1,14 @@
 ### 01. How to start go
 - Installing Go: Go installation and GOPATH setup.
 - Understanding the Workspace: Explanation of go.mod and GOPATH.
-- Basic Commands: go run, go build, go test, go fmt, and go get.
+- Basic Commands:
+```bash
+go mod init project_name
+go run file_name.go
+go run project_name
+and go get -u "repo link"
+go build
+```
 
 ### 02. Data Types and common variable rules
 ### 02. Data Types and Common Variable Rules
@@ -92,6 +99,31 @@ for i < len(fruits){
 	i++
 }
 ```
+- Infinity loop with break
+```go
+i := 1
+for{
+	fmt.Println(i)
+	if i == 100{
+		break
+	}
+	i += 1
+}
+```
+- loop with goto
+```go
+	i := 1
+	for{
+		fmt.Println(i)
+		if i == 100{
+			goto finish
+		}
+		i += 1
+	}
+	finish:
+		fmt.Println("Finished")
+```
+
 ### 05 Function
 - Variadic Functions: Functions that accept variable-length arguments.
 - Named Return Values: Cleaner return statements.
