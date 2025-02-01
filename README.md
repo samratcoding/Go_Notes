@@ -59,7 +59,6 @@ func main(){
 ```
 - Defer
 ```go
-```go
 package main
 import "fmt"
 func main() {
