@@ -43,7 +43,7 @@
 ### 03. Statement
 - If-Else: Multi-condition handling.
 ```go
-  package main
+package main
 import ("fmt")
 func main(){
 	var x int;
@@ -69,11 +69,29 @@ func main() {
 // This will be printed last
 ```
 ### 04. Loop
-- Basic for Loop: Iterating over numbers and ranges.
-- for with Condition: Using it as a while loop.
-- Iterating with range: On slices, maps, and channels.
-- Breaking and Continuing: Exiting loops early.
-
+- For Loop with range
+```go
+fruits := []string{"apple", "banana", "orange"}
+for i := range fruits{
+	fmt.Println(fruits[i])
+}
+```
+- Normal Loop in one statement
+```go
+fruits := []string{"apple", "banana", "orange"}
+for i := 0; i<len(fruits); i++{
+	fmt.Println(fruits[i])
+}
+```
+- Like while Loop
+```go
+fruits := []string{"apple", "banana", "orange"}
+i := 0
+for i < len(fruits){
+	fmt.Println(fruits[i])
+	i++
+}
+```
 ### 05 Function
 - Variadic Functions: Functions that accept variable-length arguments.
 - Named Return Values: Cleaner return statements.
