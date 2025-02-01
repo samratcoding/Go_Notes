@@ -42,10 +42,26 @@
   
 ### 03. Statement
 - If-Else: Multi-condition handling.
-- Switch: Handling multiple cases efficiently, including type switches.
-- Defer: Using defer for cleanup operations.
-- Fallthrough: Usage and implications in switch.
-
+  ```go
+  ```
+- Defer
+```go
+package main
+import ("fmt")
+func main(){
+	var x int;
+	fmt.Scan(&x);
+	if x%2 == 0 {
+		fmt.Println("Even")
+	} else if x > 1{
+		fmt.Println("Odd")
+	} else{
+		fmt.Println("Neither")
+	}
+}
+// This will be printed first
+// This will be printed last
+```
 ### 04. Loop
 - Basic for Loop: Iterating over numbers and ranges.
 - for with Condition: Using it as a while loop.
