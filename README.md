@@ -42,11 +42,8 @@
   
 ### 03. Statement
 - If-Else: Multi-condition handling.
-  ```go
-  ```
-- Defer
 ```go
-package main
+  package main
 import ("fmt")
 func main(){
 	var x int;
@@ -58,6 +55,16 @@ func main(){
 	} else{
 		fmt.Println("Neither")
 	}
+}
+```
+- Defer
+```go
+```go
+package main
+import "fmt"
+func main() {
+    defer fmt.Println("This will be printed last")
+    fmt.Println("This will be printed first")
 }
 // This will be printed first
 // This will be printed last
