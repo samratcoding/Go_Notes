@@ -213,3 +213,23 @@ Project Use Cases (which collection/sequence data type where should use)
 - - Using bufio for efficient IO.
 - File Manipulation:
 - - Checking existence, renaming, and deleting files.
+  
+## 14. Others
+- Time
+```go
+package main
+import ("time"
+	"fmt")
+func main(){
+
+	fmt.Println(time.Now().Local().Format("01-02-2006 Monday 15:04:05"))
+	// Printf is a function that can format string and return value and error status
+	currentTime, err := fmt.Printf(time.Now().Format("01-02-2006 Monday 15:04:05"))
+	if err != nil{
+		fmt.Println(currentTime, err)
+	}
+	// 
+	formatTime := fmt.Sprintf(time.Now().Format("01-02-2006 Monday 15:04:05"))
+	fmt.Println(formatTime)
+}
+```
