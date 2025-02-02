@@ -170,7 +170,7 @@ func main() {
 	}
 }
 ```
-- Past unkwon multiple arguments argument
+- Pass unkwon multiple arguments argument
 ```go
 func calculate(a ...int) int {
 	sum := 0
