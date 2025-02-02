@@ -134,11 +134,43 @@ for{
 		fmt.Println("Finished")
 ```
 
-### 05 Function
-- Variadic Functions: Functions that accept variable-length arguments.
-- Named Return Values: Cleaner return statements.
-- Anonymous Functions: Inline functions and closures.
-- Method Receiver Functions: Functions tied to structs (key to Go's OOP).
+### 05 Function & Method
+- Normal Function
+```go
+func add(x, y int) int {  // func name(arg1, arg2, type) return_type { area}  return type can be multiple (int, string)
+	return x + y
+}
+func main() {
+	result := add(1, -1)
+	fmt.Println(result)
+}
+```
+- Function with error handle
+```go
+package main
+import (
+	"errors"
+	"fmt"
+)
+func add(x, y int) (int, error) {  // return errpr type with value
+	if x < 0 || y < 0 {
+		return 0, errors.New("x or y is less than 0")
+	}else{
+		return x + y, nil
+	}
+}
+func main() {
+	// result, _ := add(1, -1)   // if receive only value then  use _ instead or err or this kind
+	// fmt.Println(result)
+
+	result, err := add(1, 2)
+	if err != nil {
+		fmt.Println(err)	
+	}else{
+		fmt.Println(result)
+	}
+}
+```
 
 ### 06. Common Built-in methods
 - Time and Sleep:
