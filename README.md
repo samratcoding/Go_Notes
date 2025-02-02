@@ -170,6 +170,23 @@ func main() {
 	}
 }
 ```
+- Past unkwon multiple arguments argument
+```go
+func calculate(a ...int) int {
+	sum := 0
+	for i := range a {
+		sum += a[i]
+	}
+	return sum
+}
+
+func main() {
+	lsit := []int{1, 2, 3, 4, 5}
+	result := calculate(lsit...)
+	// result = calculate(1, 2, 3, 4, 5)
+	fmt.Println(result)
+}
+```
 
 ### 06. Common Built-in methods
 - Time and Sleep:
