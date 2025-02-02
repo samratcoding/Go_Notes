@@ -276,7 +276,7 @@ func main() {
 }
 ```
 - Handle slice/array with struct 
-```
+```go
 func main() {
 	// Create a slice of students
 	students := []Student{
