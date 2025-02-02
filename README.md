@@ -228,10 +228,76 @@ func main() {
 }
 ```
 ### 07. Common Struct and method 
+- Simple Struct
 ```go
+package main
+import "fmt"
+type Student struct {
+	id   int
+	name string
+	GPA  float32
+}
+func main() {
+	// s1 := Student{1, "John", 3.93}
+	s1 := Student{id : 1, name : "John", GPA: 3.93}  // best way dosen't give error less args input
+	fmt.Println(s1.id)
+	s1.id = 2 // change the value of id
+	fmt.Println(s1.name)
+	fmt.Println(s1.GPA)
+	fmt.Println(s1.id)
 
+}
 ```
+- Methods
+```go
+package main
+import "fmt"
+type Student struct {
+	id   int
+	name string
+	number  int
+	GPA float32
+}
 
+func (s *Student) calculateGPA(){   // if dosen't pass as pointer then main struct never update it will return just a copy
+	if s.number > 80 {
+		s.GPA = 4.0
+	}else if s.number > 70 {
+		s.GPA = 3.0
+	}else {
+		s.GPA = 2.0
+	}
+}
+
+func main() {
+	s1 := Student{id : 1, name :"John", number: 75}
+	s1.calculateGPA()
+	fmt.Println(s1.GPA)
+}
+```
+- Handle slice/array with struct 
+```
+func main() {
+	// Create a slice of students
+	students := []Student{
+		{id: 1, name: "Samrat Biswas", number: 60},
+		{id: 2, name: "John Doe", number: 85},
+		{id: 3, name: "Jane Smith", number: 75},
+		{id: 4, name: "Alice Johnson", number: 65},
+	}
+
+	// Calculate GPA for each student
+	for i := range students {
+		students[i].calculateGpa()
+	}
+
+	// Print the details of all students
+	for _, student := range students {
+		fmt.Printf("ID: %d, Name: %s, Number: %d, GPA: %.1f\n",
+			student.id, student.name, student.number, student.GPA)
+	}
+}
+```
 ### 08. Common Built-in methods
 - Time and Sleep:
 - - Formatting and parsing time.
