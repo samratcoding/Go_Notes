@@ -322,6 +322,19 @@ func main() {
 - List - with all manipulation's methods (loop, append, delete, pop etc )
 - Slice - with all manipulation's methods (loop, append, delete, pop etc )
 - Map - with all manipulation (loop, insert key value, remove etc)
+```go
+func main() {
+	students := make(map[string] string)
+	students["name"] = "John"
+	students["age"] = "20"
+	students["GPA"] = "3.14"
+	students["isStudent"] = "true"
+
+	for key, value := range students {
+		println(key, value)
+	}
+}
+```
 - Struct - with all manipulation (nested structs, loop, append, remove etc)
 Project Use Cases (which collection/sequence data type where should use)
 
