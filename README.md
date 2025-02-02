@@ -227,7 +227,43 @@ func main(){
 ```
 - Custom Dynamic Error Handle
 ```go
+package main
 
+import (
+	"fmt"
+	"strconv"
+)
+func convert_number(n interface{}) (int32, error){
+
+	switch v := n.(type){
+	case int:
+		return int32(v), nil
+	
+	case float32:
+		return int32(v), nil
+	case string:
+		result, err := strconv.ParseInt(v, 10, 32)
+		if err != nil{
+			return 0, err
+		}else{
+			return int32(result), nil
+		}
+	default:
+		return 0, fmt.Errorf("Unsupported assigned")
+
+	}
+}
+
+func main(){
+	// x,_ := convert_number("10a")
+	// fmt.Println(x)
+	x, err := convert_number("10a")
+	if err != nil{
+		fmt.Println(err)
+	}else{
+		fmt.Println(x)
+	}
+}
 
 ```
 
