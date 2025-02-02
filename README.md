@@ -225,7 +225,7 @@ func main(){
 	}
 }
 ```
-- Custom Dynamic Error Handle
+- Custom Dynamic Error Handle - to integer convert
 ```go
 package main
 
@@ -233,7 +233,7 @@ import (
 	"fmt"
 	"strconv"
 )
-func convert_number(n interface{}) (int32, error){
+func to_integer(n interface{}) (int32, error){
 
 	switch v := n.(type){
 	case int:
@@ -255,9 +255,9 @@ func convert_number(n interface{}) (int32, error){
 }
 
 func main(){
-	// x,_ := convert_number("10a")
+	// x,_ := to_integer("10a")
 	// fmt.Println(x)
-	x, err := convert_number("10a")
+	x, err := to_integer("10a")
 	if err != nil{
 		fmt.Println(err)
 	}else{
@@ -266,7 +266,71 @@ func main(){
 }
 
 ```
+- Dynamic error handle - to string convert
+```go
+package main
+import (
+	"fmt"
+	"strconv"
+)
+func to_string(number interface{}) (string, error) {
+	switch value := number.(type) {
+	case int8, int16, int32, int64, int:
+		// return fmt.Sprintf("%d", value), nil
+		return strconv.FormatInt(int64(value.(int)), 10), nil
+	case float32, float64:
+		return strconv.FormatFloat(value.(float64), 'f', 2, 64), nil
+	case string:
+		return value, nil
+	default:
+		return "", fmt.Errorf("unsupported type: %t", value)
+	}
+}
+func main() {
+	x, err := to_string(42)
+	if err != nil {
+		fmt.Println(err)
+	}else{
+		fmt.Println(x)
+	}
+}
+```
+- Dynamic error handle - to Float convert
+```go
+package main
+import (
+	"fmt"
+	"strconv"
+)
+func to_float(number interface{}) (float64, error) {
+	switch value := number.(type) {
+	case int8, int16, int32, int64, int:
+		return float64(value.(int)), nil
+	case string:
+		result, err := strconv.ParseFloat(value, 64)
+		if err != nil{
+			return 0, err
+		}else{
+			return result, nil
+		}
+	case float32, float64:
+		return value.(float64), nil
+	default:
+		return 0, fmt.Errorf("unsupported value %t", value)
+	}
+}
 
+func main() {
+
+	x, err := to_float(102)
+	if err != nil{
+		fmt.Println(err)
+	}else{
+		fmt.Printf("%.1f", x)
+	}
+
+}
+```
 
 ### 13. File Handling and IO
 - File Operations:
