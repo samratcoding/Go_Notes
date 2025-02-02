@@ -198,13 +198,39 @@ Project Use Cases (which collection/sequence data type where should use)
 - - HTML parsing with goquery.
 
 ### 12. Error Handling (Try Except)
-- Error Handling Idioms:
-- - if err != nil.
-- - Wrapping errors with fmt.Errorf.
-- Custom Errors:
-- - Defining custom error types.
-- Panic and Recover:
-- - Handling unexpected errors gracefully.
+- Simple error handeling
+```go
+package main
+import (
+	"fmt"
+	"strconv"
+)
+func convert_number(n string) (int64, error){        // int8, 16, 32, 64
+	result, err := strconv.ParseInt(n, 10, 64)   // 8, 16, 32, 64
+    if err != nil{
+		return 0, err
+	}else{
+		return result, nil      // return int8(result), int16(result), int32(result),  int32(result)/result, 
+	}
+}
+
+func main(){
+	// x,_ := convert_number("10a")
+	// fmt.Println(x)
+	x, err := convert_number("10a")
+	if err != nil{
+		fmt.Println(err)
+	}else{
+		fmt.Println(x)
+	}
+}
+```
+- Custom Dynamic Error Handle
+```go
+
+
+```
+
 
 ### 13. File Handling and IO
 - File Operations:
