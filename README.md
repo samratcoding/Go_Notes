@@ -11,7 +11,6 @@ go build
 ```
 
 ### 02. Data Types and common variable rules
-### 02. Data Types and Common Variable Rules
 - **Variable Declaration**: 
   - Use `var` for explicit declarations:  
     ```go
@@ -134,7 +133,7 @@ for{
 		fmt.Println("Finished")
 ```
 
-### 05 Function & Method
+### 05 Function
 - Normal Function
 ```go
 func add(x, y int) int {  // func name(arg1, arg2, type) return_type { area}  return type can be multiple (int, string)
