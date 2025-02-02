@@ -179,11 +179,26 @@ func calculate(a ...int) int {
 	}
 	return sum
 }
-
 func main() {
 	lsit := []int{1, 2, 3, 4, 5}
 	result := calculate(lsit...)
 	// result = calculate(1, 2, 3, 4, 5)
+	fmt.Println(result)
+}
+```
+- Pass array as argument
+```go
+func calculate(a []int) int {
+	sum := 0
+	for i := range a {
+		sum += a[i]
+	}
+	return sum
+}
+
+func main() {
+	lsit := []int{1, 2, 3, 4, 5}
+	result := calculate(lsit)
 	fmt.Println(result)
 }
 ```
@@ -201,9 +216,28 @@ func main() {
 - - Using make for slices, maps, and channels.
 
 ### 07. call back methods
-- Passing Functions as Arguments:
-- - Defining and using callbacks.
-- - Using closures for callback behavior.
+- Passing another Functions & Anonymous function
+```go
+package main
+
+func calculate(x, y int, callback func(int)int) int{
+	result := x + y
+	return callback(result)
+}
+func add(x int) int{
+	return x * x
+}
+
+func main() {
+	x, y := 1, 2
+	result1 := calculate(x, y, add)  // call another function as a parameter
+	result2 := calculate(x, y, func(x int) int{  // call anonymous function, rules is same amount and type args invoked callback
+		return x * x * x
+	})
+	println(result1)
+	println(result2)
+}
+```
 - Practical Use Cases:
 - - Goroutine callbacks.
 - - Sorting using custom comparator callbacks.
