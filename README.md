@@ -1,4 +1,4 @@
-### 01. How to start go
+### 00. How to start go
 - Installing Go: Go installation and GOPATH setup.
 - Understanding the Workspace: Explanation of go.mod and GOPATH.
 - Basic Commands:
@@ -9,11 +9,10 @@ go run project_name
 and go get -u "repo link"
 go build
 ```
-
 ## Table of Contents
 
-1. [Data Types and common variable rules](#02-Data-Types-and-common-variable-rules)
-2. [Core Concepts & Modules](#2-core-concepts--modules)
+1. [Data Types and common variable rules](#01-Data-Types-and-common-variable-rules)
+2. [Statement](#02-Statement)
 3. [Asynchronous Programming](#3-asynchronous-programming)
 4. [Working with Files & Streams](#4-working-with-files--streams)
 5. [HTTP Server & Client](#5-http-server--client)
@@ -27,7 +26,8 @@ go build
 13. [Advanced Topics (Optional)](#13-advanced-topics-optional)
 14. [Projects to Practice](#14-projects-to-practice)
 
-### 02. Data Types and common variable rules
+
+### 01. Data Types and common variable rules
 - **Variable Declaration**: 
   - Use `var` for explicit declarations:  
     ```go
@@ -63,7 +63,7 @@ go build
     ```
   - Type aliases help improve code readability and enforce type safety.
   
-### 03. Statement
+### 02. Statement
 - If-Else: Multi-condition handling.
 ```go
 package main
