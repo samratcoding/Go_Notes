@@ -299,16 +299,71 @@ func main() {
 }
 ```
 ### 08. Common Built-in methods
-- Time and Sleep:
-- - Formatting and parsing time.
-- - Using time.Sleep for delays.
-- Type and Typecasting:
-- - Explicit casting (int(x)).
-- - Checking types with reflection (reflect.TypeOf).
-- Slice Operations:
-- - append, len, cap, copy.
-- Creating Collections:
-- - Using make for slices, maps, and channels.
+- fmt
+```go
+
+```
+- reflect
+```go
+
+```
+- Time (Now, Sleep, After, Tick)
+```go
+
+```
+- len()
+```go
+
+```
+- cap()
+```go
+
+```
+- make()
+```go
+
+```
+- new()
+```go
+
+```
+- copy()
+```go
+
+```
+- append()
+```go
+
+```
+- delete()
+```go
+
+```
+- close()
+```go
+
+```
+- panic()
+```go
+
+```
+- recover()
+```go
+
+```
+- math
+```go
+
+```
+- strings
+```go
+
+```
+- sort
+```go
+
+```
+
 
 ### 09. String manipulation
 - String Operations:
