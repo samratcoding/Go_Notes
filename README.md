@@ -10,6 +10,23 @@ and go get -u "repo link"
 go build
 ```
 
+## Table of Contents
+
+1. [Data Types and common variable rules](#02-Data-Types-and-common-variablerules)
+2. [Core Concepts & Modules](#2-core-concepts--modules)
+3. [Asynchronous Programming](#3-asynchronous-programming)
+4. [Working with Files & Streams](#4-working-with-files--streams)
+5. [HTTP Server & Client](#5-http-server--client)
+6. [Express.js Framework](#6-expressjs-framework)
+7. [Working with Databases](#7-working-with-databases)
+8. [Authentication & Security](#8-authentication--security)
+9. [Real-time Communication](#9-real-time-communication)
+10. [Testing & Debugging](#10-testing--debugging)
+11. [Building RESTful APIs](#11-building-restful-apis)
+12. [Deployment & Best Practices](#12-deployment--best-practices)
+13. [Advanced Topics (Optional)](#13-advanced-topics-optional)
+14. [Projects to Practice](#14-projects-to-practice)
+
 ### 02. Data Types and common variable rules
 - **Variable Declaration**: 
   - Use `var` for explicit declarations:  
