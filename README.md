@@ -13,18 +13,18 @@ go build
 
 1. [Data Types and common variable rules](#01-Data-Types-and-common-variable-rules)
 2. [Statement](#02-Statement)
-3. [Asynchronous Programming](#3-asynchronous-programming)
-4. [Working with Files & Streams](#4-working-with-files--streams)
-5. [HTTP Server & Client](#5-http-server--client)
-6. [Express.js Framework](#6-expressjs-framework)
-7. [Working with Databases](#7-working-with-databases)
-8. [Authentication & Security](#8-authentication--security)
-9. [Real-time Communication](#9-real-time-communication)
-10. [Testing & Debugging](#10-testing--debugging)
-11. [Building RESTful APIs](#11-building-restful-apis)
-12. [Deployment & Best Practices](#12-deployment--best-practices)
-13. [Advanced Topics (Optional)](#13-advanced-topics-optional)
-14. [Projects to Practice](#14-projects-to-practice)
+3. [Loop](#3-Loop)
+4. [Function](#4-Function)
+5. [call back function](#5-call-back-function)
+6. [Common Struct and method ](#6-Common-Struct-and-method )
+7. [Common Built-in methods](#7-Common-Built-in-methods)
+8. [String manipulation](#8-String-manipulation)
+9. [List, Slice, Map, Struct also project base usecase](#9-List-Slice-Map-Struct-also-project-base-usecase)
+10. [OOP Concept with Interface and struct](#10-OOP-Concept-with-Interface-and-struct)
+11. [Threading or goroutine, Basic Request, Data Scrapping etc](#11-Threading-or-goroutine-Basic-Request-Data-Scrapping-etc)
+12. [Error Handling](#12-Error-Handling)
+13. [File Handling and IO](#13-File-Handling-and-IO)
+14. [Others](#14-Others)
 
 
 ### 01. Data Types and common variable rules
@@ -91,7 +91,7 @@ func main() {
 // This will be printed first
 // This will be printed last
 ```
-### 04. Loop
+### 03. Loop
 - For Loop with range
 ```go
 fruits := []string{"apple", "banana", "orange"}
@@ -150,7 +150,7 @@ for{
 		fmt.Println("Finished")
 ```
 
-### 05 Function
+### 04. Function
 - Normal Function
 ```go
 func add(x, y int) int {  // func name(arg1, arg2, type) return_type { area}  return type can be multiple (int, string)
@@ -221,7 +221,7 @@ func main() {
 ```
 
 
-### 06. call back function
+### 05. call back function
 - Passing another Functions & Anonymous function
 ```go
 package main
@@ -244,7 +244,7 @@ func main() {
 	println(result2)
 }
 ```
-### 07. Common Struct and method 
+### 06. Common Struct and method 
 - Simple Struct
 ```go
 package main
@@ -315,7 +315,7 @@ func main() {
 	}
 }
 ```
-### 08. Common Built-in methods
+### 07. Common Built-in methods
 - fmt
 ```go
 fmt.Print("Hello, ")
@@ -435,7 +435,7 @@ fmt.Printf("Name: %s, Age: %d\n", name, age)
 ```
 
 
-### 09. String manipulation
+### 08. String manipulation
 - String Operations:
 - - Concatenation and splitting.
 - - Trimming, prefix, and suffix checks.
@@ -443,7 +443,7 @@ fmt.Printf("Name: %s, Age: %d\n", name, age)
 - Regular Expressions
 - String to other types (strconv)
 
-### 10. List, Slice, Map, Struct also project base usecase 
+### 09. List, Slice, Map, Struct also project base usecase 
 - List - with all manipulation's methods (loop, append, delete, pop etc )
 - Slice - with all manipulation's methods (loop, append, delete, pop etc )
 - Map - with all manipulation (loop, insert key value, remove etc)
@@ -463,7 +463,7 @@ func main() {
 - Struct - with all manipulation (nested structs, loop, append, remove etc)
 Project Use Cases (which collection/sequence data type where should use)
 
-### 11. OOP Concept with Interface and struct
+### 10. OOP Concept with Interface and struct
 - Structs and Interfaces:
 - - Using structs as objects.
 - - Interfaces for polymorphism.
@@ -474,7 +474,7 @@ Project Use Cases (which collection/sequence data type where should use)
 - Design Patterns:
 - - Factory, Singleton, and Adapter in Go.
 
-### 12. Threading/goroutine, Basic Request, Data Scrapping etc
+### 11. Threading or goroutine, Basic Request, Data Scrapping etc
 - Threading:
 - - Using goroutines for lightweight concurrency.
 - - Synchronization with sync.WaitGroup and sync.Mutex.
@@ -485,7 +485,7 @@ Project Use Cases (which collection/sequence data type where should use)
 - - Using colly for web scraping.
 - - HTML parsing with goquery.
 
-### 13. Error Handling (Try Except)
+### 12. Error Handling
 - Simple error handeling
 ```go
 package main
