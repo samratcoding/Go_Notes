@@ -12,7 +12,7 @@ go build
 
 ## Table of Contents
 
-1. [Data Types and common variable rules](#02-Data-Types-and-common-variablerules)
+1. [Data Types and common variable rules](#02-Data-Types-and-common-variable-rules)
 2. [Core Concepts & Modules](#2-core-concepts--modules)
 3. [Asynchronous Programming](#3-asynchronous-programming)
 4. [Working with Files & Streams](#4-working-with-files--streams)
