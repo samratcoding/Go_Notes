@@ -93,6 +93,7 @@ func main() {
 // This will be printed last
 ```
 ### 03. Loop
+[Return Table of Contents](#Table-of-Contents)
 - For Loop with range
 ```go
 fruits := []string{"apple", "banana", "orange"}
