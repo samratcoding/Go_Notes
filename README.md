@@ -301,7 +301,60 @@ func main() {
 ### 08. Common Built-in methods
 - fmt
 ```go
+fmt.Print("Hello, ")
+fmt.Print("World!")
+// Output: Hello, World!
 
+fmt.Println("Hello, World!")
+fmt.Println("Welcome to Go!")
+// Hello, World!
+// Welcome to Go!
+
+name := "Alice"
+age := 30
+fmt.Printf("Name: %s, Age: %d\n", name, age)
+// Output: Name: Alice, Age: 30
+
+name := "Bob"
+age := 25
+s := fmt.Sprintf("Name: %s, Age: %d", name, age)
+fmt.Println(s)
+// Output: Name: Bob, Age: 25
+
+s := fmt.Sprintln("Hello, World!")
+fmt.Print(s)
+// Output: Hello, World!
+
+err := fmt.Errorf("invalid value: %d", 42)
+fmt.Println(err)
+// Output: invalid value: 42
+
+var name string
+var age int
+fmt.Print("Enter your name and age: ")
+fmt.Scan(&name, &age)
+fmt.Printf("Name: %s, Age: %d\n", name, age)
+// Input: Alice 30
+// Output: Name: Alice, Age: 30
+
+var name string
+var age int
+fmt.Print("Enter your name and age: ")
+fmt.Scanf("%s %d", &name, &age)
+fmt.Printf("Name: %s, Age: %d\n", name, age)
+// Input: Alice 30
+// Output: Name: Alice, Age: 30
+
+var name string
+var age int
+fmt.Print("Enter your name and age: ")
+fmt.Scanln(&name, &age)
+fmt.Printf("Name: %s, Age: %d\n", name, age)
+// Input: Alice 30
+// Output: Name: Alice, Age: 30
+
+// fmt.Printf("Index is : %d value is :%s \n", index, value)
+// %s = string, %d = decimal/int,  %v = value, %t = type, %f =float, %+v = struct with field name, %t = boolean, %p = pointer, %b = binrar
 ```
 - reflect
 ```go
