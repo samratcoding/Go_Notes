@@ -10,7 +10,6 @@ and go get -u "repo link"
 go build
 ```
 ## Table of Contents
-
 1. [Data Types and common variable rules](#01-Data-Types-and-common-variable-rules)
 2. [Statement](#02-Statement)
 3. [Loop](#3-Loop)
@@ -28,6 +27,7 @@ go build
 
 
 ### 01. Data Types and common variable rules
+[Return Table of Contents](#Table-of-Contents)
 - **Variable Declaration**: 
   - Use `var` for explicit declarations:  
     ```go
@@ -64,6 +64,7 @@ go build
   - Type aliases help improve code readability and enforce type safety.
   
 ### 02. Statement
+[Return Table of Contents](#Table-of-Contents)
 - If-Else: Multi-condition handling.
 ```go
 package main
@@ -151,6 +152,7 @@ for{
 ```
 
 ### 04. Function
+[Return Table of Contents](#Table-of-Contents)
 - Normal Function
 ```go
 func add(x, y int) int {  // func name(arg1, arg2, type) return_type { area}  return type can be multiple (int, string)
@@ -222,6 +224,7 @@ func main() {
 
 
 ### 05. call back function
+[Return Table of Contents](#Table-of-Contents)
 - Passing another Functions & Anonymous function
 ```go
 package main
@@ -245,6 +248,7 @@ func main() {
 }
 ```
 ### 06. Common Struct and method 
+[Return Table of Contents](#Table-of-Contents)
 - Simple Struct
 ```go
 package main
@@ -316,6 +320,7 @@ func main() {
 }
 ```
 ### 07. Common Built-in methods
+[Return Table of Contents](#Table-of-Contents)
 - fmt
 ```go
 fmt.Print("Hello, ")
@@ -436,6 +441,7 @@ fmt.Printf("Name: %s, Age: %d\n", name, age)
 
 
 ### 08. String manipulation
+[Return Table of Contents](#Table-of-Contents)
 - String Operations:
 - - Concatenation and splitting.
 - - Trimming, prefix, and suffix checks.
@@ -444,6 +450,7 @@ fmt.Printf("Name: %s, Age: %d\n", name, age)
 - String to other types (strconv)
 
 ### 09. List, Slice, Map, Struct also project base usecase 
+[Return Table of Contents](#Table-of-Contents)
 - List - with all manipulation's methods (loop, append, delete, pop etc )
 - Slice - with all manipulation's methods (loop, append, delete, pop etc )
 - Map - with all manipulation (loop, insert key value, remove etc)
@@ -464,6 +471,7 @@ func main() {
 Project Use Cases (which collection/sequence data type where should use)
 
 ### 10. OOP Concept with Interface and struct
+[Return Table of Contents](#Table-of-Contents)
 - Structs and Interfaces:
 - - Using structs as objects.
 - - Interfaces for polymorphism.
@@ -475,6 +483,7 @@ Project Use Cases (which collection/sequence data type where should use)
 - - Factory, Singleton, and Adapter in Go.
 
 ### 11. Threading or goroutine, Basic Request, Data Scrapping etc
+[Return Table of Contents](#Table-of-Contents)
 - Threading:
 - - Using goroutines for lightweight concurrency.
 - - Synchronization with sync.WaitGroup and sync.Mutex.
@@ -486,6 +495,7 @@ Project Use Cases (which collection/sequence data type where should use)
 - - HTML parsing with goquery.
 
 ### 12. Error Handling
+[Return Table of Contents](#Table-of-Contents)
 - Simple error handeling
 ```go
 package main
@@ -621,6 +631,7 @@ func main() {
 ```
 
 ### 13. File Handling and IO
+[Return Table of Contents](#Table-of-Contents)
 - File Operations:
 - - Reading and writing files (os and io/ioutil).
 - Buffering:
@@ -629,6 +640,7 @@ func main() {
 - - Checking existence, renaming, and deleting files.
   
 ## 14. Others
+[Return Table of Contents](#Table-of-Contents)
 - Time
 ```go
 package main
