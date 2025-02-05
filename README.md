@@ -51,6 +51,8 @@ go build
 - **Type Inference**: 
   - The `:=` operator infers the type from the assigned value:
     ```go
+    var z interface{}
+    var z any
     z := "Hello" // z is inferred as string
     ```
   - Use `var` when you need to explicitly specify the type.
