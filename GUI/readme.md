@@ -22,6 +22,9 @@ go get -u github.com/therecipe/qt/cmd/...
 ```
 ```
 go install github.com/therecipe/qt/cmd/...
+or
+go install github.com/stephenlyu/goqtuic@latest
+goqtuic -ui-file login.ui -go-ui-dir .
 ```
 check
 ```
