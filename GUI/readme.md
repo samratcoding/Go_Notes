@@ -1,3 +1,8 @@
+Install MingW 64
+```
+https://www.msys2.org/
+```
+
 ```
 https://github.com/mappu/miqt
 ```
