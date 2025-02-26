@@ -20,3 +20,6 @@ thererecip
 ```
 go get -u github.com/therecipe/qt/cmd/...
 ```
+```
+go install github.com/therecipe/qt/cmd/...
+```
