@@ -29,6 +29,12 @@ Edit PATH:
 Remove C:\msys64\ucrt64\bin\go.exe
 Ensure C:\Program Files\Go\bin is present before MSYS2 paths.
 ```
+vs code terminal
+```
+$env:GOROOT = "C:\Program Files\Go"
+$env:GOPATH = "$env:USERPROFILE\go"
+$env:PATH += ";C:\Program Files\Go\bin;$env:GOPATH\bin"
+```
 
 ```
 https://github.com/mappu/miqt
