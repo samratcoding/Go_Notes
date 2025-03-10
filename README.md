@@ -475,13 +475,171 @@ Project Use Cases (which collection/sequence data type where should use)
 
 ### 10. OOP Concept with Interface and struct
 [Return Table of Contents](#Table-of-Contents)
-- Structs and Interfaces:
-- - Using structs as objects.
-- - Interfaces for polymorphism.
+- constructor:
+```go
+package main
+import "fmt"
+type Person struct {
+	Name string
+	Age  int
+}
+
+// Constructor function
+func NewPerson(name string, age int) *Person {
+	return &Person{Name: name, Age: age}
+}
+
+func main() {
+	// Create a new instance using the constructor
+	person := NewPerson("Alice", 30)
+	fmt.Println(person)
+}
+```
+- Method
+```go
+func (p *Person) Greet() {
+	fmt.Printf("Hello, my name is %s and I am %d years old.\n", p.Name, p.Age)
+}
+func main() {
+	person := NewPerson("Alice", 30)
+	// Call the method
+	person.Greet()
+}
+```
+- Call Method in Another Method
+```go
+// Another method that calls Greet
+func (p *Person) Introduce() {
+	fmt.Println("Let me introduce myself:")
+	p.Greet()
+}
+
+func main() {
+	person := NewPerson("Alice", 30)
+	// Call the method
+	person.Introduce()
+}
+```
+- Call Method in Another Method with Argument Pass
+```go
+// Method on Person struct with an argument
+func (p *Person) GreetWithMessage(message string) {
+	fmt.Printf("%s! My name is %s and I am %d years old.\n", message, p.Name, p.Age)
+}
+// Another method that calls GreetWithMessage
+func (p *Person) IntroduceWithMessage(message string) {
+	fmt.Println("Let me introduce myself:")
+	p.GreetWithMessage(message)
+}
+
+func main() {
+	person := NewPerson("Alice", 30)
+	// Call the method
+	person.IntroduceWithMessage("Greetings")
+}
+```
+- Interfaces for Polymorphism
+```go
+package main
+import "fmt"
+
+// Define an interface
+type Greeter interface {
+	Greet()
+}
+// Define a struct
+type Person struct {
+	Name string
+	Age  int
+}
+// Implement the Greet method from the Greeter interface
+func (p *Person) Greet() {
+	fmt.Printf("Hello, my name is %s and I am %d years old.\n", p.Name, p.Age)
+}
+// Another struct that implements the Greeter interface
+type Robot struct {
+	ID string
+}
+// Implement the Greet method from the Greeter interface
+func (r *Robot) Greet() {
+	fmt.Printf("Greetings, I am robot %s.\n", r.ID)
+}
+// Function that accepts a Greeter interface
+func Introduce(g Greeter) {
+	g.Greet()
+}
+func main() {
+	// Create instances
+	person := &Person{Name: "Alice", Age: 30}
+	robot := &Robot{ID: "XJ-9"}
+	// Use the Introduce function with different types
+	Introduce(person)
+	Introduce(robot)
+}
+```
 - Composition over Inheritance:
--- Embedding structs.
-- Method Receivers:
-- - Pointer vs. value receivers.
+```go
+type Engine struct {
+	Power int
+}
+type Car struct {
+	Engine
+	Brand string
+}
+func main() {
+	car := Car{
+		Engine: Engine{Power: 150},
+		Brand:  "Toyota",
+	}
+	fmt.Printf("Car brand: %s, Engine power: %d\n", car.Brand, car.Power)
+}
+```
+- Inheritance
+```go
+type Animal struct {
+	Name string
+}
+
+type Dog struct {
+	Animal
+	Breed string
+}
+
+func (a Animal) Speak() {
+	fmt.Println("Animal speaks")
+}
+
+func (d Dog) Speak() {
+	fmt.Printf("%s barks\n", d.Name)
+}
+
+func main() {
+	dog := Dog{
+		Animal: Animal{Name: "Buddy"},
+		Breed:  "Golden Retriever",
+	}
+	dog.Speak()
+}
+```
+- Pointer vs. value receivers.
+```go
+type Counter struct {
+	Value int
+}
+// Method with a pointer receiver (modifies the struct)
+func (c *Counter) Increment() {
+	c.Value++
+}
+// Method with a value receiver (does not modify the struct)
+func (c Counter) Display() {
+	fmt.Printf("Counter Value: %d\n", c.Value)
+}
+func main() {
+	counter := Counter{Value: 0}
+	counter.Increment()
+	counter.Display()
+}
+```
 - Design Patterns:
 - - Factory, Singleton, and Adapter in Go.
 
